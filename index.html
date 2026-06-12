@@ -3,75 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroFuturo 2026 - Inteligência Artificial no Campo</title>
+    <title>Jogo de Corrida Top-Down</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="acessibilidade-container" aria-label="Menu de Acessibilidade">
-        <button id="btn-aumentar" title="Aumentar Fonte">A+</button>
-        <button id="btn-diminuir" title="Diminuir Fonte">A-</button>
-        <button id="btn-tema" title="Alternar Modo Escuro/Claro">🌓</button>
-        <button id="btn-falar" title="Iniciar Leitura por Voz">🔊 Ouvir</button>
-        <button id="btn-parar" title="Parar Leitura por Voz">⏹ Parar</button>
+    <div id="tela-abertura">
+        <h1>Grand Prix Retro</h1>
+        <button id="btn-jogar">Jogar</button>
     </div>
 
-    <header class="hero">
-        <div class="hero-conteudo">
-            <h1 class="hero-titulo">O Futuro do Agro é Inteligente</h1>
-            <p class="hero-subtitulo">Conectando a inteligência tecnológica à terra de forma sustentável através de Inteligência Artificial e automação de ponta.</p>
-            <button id="btn-cta" class="btn-principal">Iniciar Operação</button>
-        </div>
-    </header>
-
-    <main id="conteudo-principal">
-        
-        <section class="painel-tecnologico">
-            <h2 class="secao-titulo">Monitoramento em Tempo Real</h2>
-            
-            <div class="grid-cards">
-                <article class="card">
-                    <div class="imagem">
-                        <img src="Foto1.png" alt="Drone sobrevoando plantação de soja com gráficos digitais sobrepostos">
-                    </div>
-                    <div class="card-corpo">
-                        <h3>Análise Predictiva com <span class="destaque">IA</span></h3>
-                        <p>Otimização de insumos e detecção precoce de pragas utilizando algoritmos avançados de visão computacional.</p>
-                        <button class="btn-expandir">Ver Dados Avançados</button>
-                        <div class="painel-expansivel">
-                            <p>Nossa IA analisa imagens de satélite e drones para gerar mapas de aplicação em taxa variável, reduzindo desperdícios em até 30%.</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="imagem">
-                        <img src="Foto2.png" alt="Maquinário agrícola autônomo operando à noite com sensores luminosos verdes">
-                    </div>
-                    <div class="card-corpo">
-                        <h3>Automação <span class="destaque">Sustentável</span></h3>
-                        <p>Tratores e colheitadeiras autônomas que calculam a rota ideal para compactação mínima do solo.</p>
-                        <button class="btn-expandir">Ver Dados Avançados</button>
-                        <div class="painel-expansivel">
-                            <p>Utilizando redes neurais e sensores IoT, as máquinas tomam decisões em milissegundos, garantindo máxima eficiência energética.</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="rodape">
-        <div class="rodape-conteudo">
-            <p class="slogan">AgroFuturo 2026 ° Conectando a inteligência tecnologia à terra de forma sustentável</p>
-            <div class="referencias">
-                <p>Referências utilizadas:</p>
-                <a href="https://www.bemagro.com/beneficios-inteligencia-artificial-no-campo/" target="_blank" rel="noopener">BemAgro - IA no Campo</a> | 
-                <a href="https://www.agrolink.com.br/noticias/o-campo-conectado--como-a-ia-vem-transformando-o-agro_514351.html" target="_blank" rel="noopener">Agrolink - O Campo Conectado</a>
-            </div>
-        </div>
-    </footer>
+    <div id="arena" class="escondido">
+        <div id="jogador"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
