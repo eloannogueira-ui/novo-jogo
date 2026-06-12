@@ -35,3 +35,35 @@ body {
     bottom: 50px;
     left: 285px;
 }
+
+/* Estilização da seleção de carros */
+#selecao-carro {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.tipo-carro {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Efeito quando o mouse passa por cima (Hover) */
+.tipo-carro:hover {
+    background-color: #555;
+    border-color: #ffcc00;
+}
+
+/* Classe que usaremos no JS para destacar o carro selecionado */
+.selecionado {
+    border-color: #ffcc00;
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+}
