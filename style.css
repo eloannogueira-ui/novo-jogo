@@ -1,161 +1,37 @@
-/* Definição de Variáveis de Configuração (Paleta Requisitada e Estilos) */
-:root {
-    --azul-escuro: #0a192f;
-    --azul-metalico: #172a45;
-    --azul-celeste: #30b0f0;
-    --verde-neon: #39ff14;
-    --amarelo-ouro: #ffd700;
-    --preto: #020c1b;
-    --branco: #f8f9fa;
-    
-    /* Fontes e Espaçamentos com clamp() para responsividade fluida */
-    --fonte-titulo: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --tamanho-titulo: clamp(2rem, 5vw, 3.5rem);
-    --tamanho-texto: clamp(1rem, 1.2vw, 1.2rem);
-    --borda-raio: 12px;
-    --sombra-suave: 0 10px 30px rgba(0, 0, 0, 0.3);
-    --transicao: all 0.3s ease;
-}
-
-/* Modo Escuro Padrão / Alternável */
+/* Estilos Gerais */
 body {
-    background-color: var(--preto);
-    color: var(--branco);
-    font-family: var(--fonte-titulo);
     margin: 0;
     padding: 0;
-    font-size: var(--tamanho-texto);
-    transition: var(--transicao);
-    overflow-x: hidden;
-}
-
-/* Configuração do Tema Claro */
-body.light-mode {
-    --preto: #f0f4f8;
-    --branco: #0a192f;
-    --azul-escuro: #ffffff;
-    --azul-metalico: #e2e8f0;
-    --sombra-suave: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Caixa Flutuante de Acessibilidade */
-.acessibilidade-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: var(--azul-metalico);
-    padding: 10px;
-    border-radius: var(--borda-raio);
-    box-shadow: var(--sombra-suave);
-    z-index: 1000;
+    background-color: #222;
+    font-family: sans-serif;
     display: flex;
-    gap: 8px;
-    border: 1px solid var(--azul-celeste);
-}
-
-.acessibilidade-container button {
-    background: var(--azul-escuro);
-    color: var(--branco);
-    border: 1px solid var(--azul-celeste);
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: var(--transicao);
-}
-
-.acessibilidade-container button:hover {
-    background: var(--azul-celeste);
-    color: var(--preto);
-}
-
-/* Layout Responsivo com Grid e Flexbox */
-.hero {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    background: linear-gradient(135deg, var(--preto), var(--azul-escuro));
-    padding: 2rem;
-    border-bottom: 3px solid var(--verde-neon);
-}
-
-.hero-titulo {
-    font-size: var(--tamanho-titulo);
-    color: var(--branco);
-    text-shadow: 0 0 10px var(--azul-celeste);
-}
-
-.destaque {
-    color: var(--verde-neon);
-    font-weight: bold;
-}
-
-.grid-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    padding: 4rem 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-/* Estilo Premium dos Cards */
-.card {
-    background: var(--azul-metalico);
-    border-radius: var(--borda-raio);
+    align-items: center;
+    height: 100vh;
     overflow: hidden;
-    box-shadow: var(--sombra-suave);
-    transition: var(--transicao);
-    border: 1px solid rgba(48, 176, 240, 0.1);
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    border-color: var(--verde-neon);
-    box-shadow: 0 15px 35px rgba(57, 255, 20, 0.2);
-}
-
-.imagem img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.card-corpo {
-    padding: 20px;
-}
-
-/* Sanfona / Accordion */
-.painel-expansivel {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-}
-
-.painel-expansivel.ativo {
-    max-height: 200px; /* Ajuste flexível conforme conteúdo */
-    padding: 10px;
-    margin-top: 10px;
-    border-left: 3px solid var(--amarelo-ouro);
-}
-
-/* Rodapé */
-.rodape {
-    background: var(--preto);
-    padding: 2rem;
+#tela-abertura {
     text-align: center;
-    border-top: 1px solid var(--azul-metalico);
+    color: white;
 }
 
-.rodape a {
-    color: var(--azul-celeste);
-    text-decoration: none;
+.escondido {
+    display: none;
 }
 
-.rodape a:hover {
-    color: var(--amarelo-ouro);
+#arena {
+    width: 600px;
+    height: 600px;
+    background-color: #444;
+    position: relative;
+}
+
+#jogador {
+    width: 30px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    bottom: 50px;
+    left: 285px;
 }
